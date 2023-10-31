@@ -31,7 +31,6 @@ ou -> or
 et -> and
 si -> if
 sinon -> else
-EntreeTaille -> InputSize
 
 ## EBNF
 
