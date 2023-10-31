@@ -25,7 +25,7 @@ CHIFFRE -> DIGIT
 affiche -> display
 var -> var 
 entier -> int
-chaine -> chain/string
+chaine -> string
 pour -> for
 ou -> or
 et -> and
