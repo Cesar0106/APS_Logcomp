@@ -1,0 +1,11 @@
+var x entier
+x = 5
+var i entier = 2
+
+si i < x{
+    i =  x * 2
+}
+
+pour (a = 0; a < 10; a = a +1){
+    x = 50
+}
