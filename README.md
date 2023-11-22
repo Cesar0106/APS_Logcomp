@@ -5,6 +5,7 @@ A linguagem vai utilizar nomes comuns como if, else e for. No entanto, tudo ser�
 
 ## Dicionário FRANCES INGLES
 
+```
 PROGRAMME -> PROGRAM
 BLOC -> BLOCK
 INSTRUCTION -> INSTRUCTION 
@@ -31,39 +32,41 @@ ou -> or
 et -> and
 si -> if
 sinon -> else
+```
 
 ## EBNF
 
-PROGRAMME = { INSTRUCTION };
+```
+PROGRAMME = { INSTRUCTION } ;
 
-BLOC = { "{", INSTRUCTION, "}"};
+BLOC = "{", { INSTRUCTION }, "}" ;
 
-INSTRUCTION = ( λ | ATTRIBUTION | IMPRIME | CONDITIONNEL | BOUCLE | VARIABLE ), "\n" ;
+INSTRUCTION = ( λ | ATTRIBUTION | CONDITIONNEL | BOUCLE | VARIABLE ), "\n" ;
 
-ATTRIBUTION = IDENTIFIANT, "=", EXPRESSION;
+VARIABLE = "var", IDENTIFIANT, "entier", [ "=", EXPRESSION ] ;
 
-IMPRIME = "affiche", "#", EXPRESSION, "#";
+ATTRIBUTION = IDENTIFIANT, "=", EXPRESSION ;
 
-EXPRESSION = TERME, {("+" | "-" | "."), TERME};
+CONDITIONNEL = "si", COMPARAISON, BLOC;
 
-TERME = FACTEUR, {("*" | "/"), FACTEUR };
+BOUCLE = "pour", "(", ATTRIBUTION, ";", COMPARAISON, ";", ATTRIBUTION, ")", BLOC ;
 
-FACTEUR = (("+" | "-" | "!"), FACTEUR | NOMBRE | LETTRE | "(", EXPRESSION, ")" | IDENTIFIANT | ENTREE, "(", ")");
+EXPRESSION = TERME, { ( "+" | "-" ), TERME } ;
 
-COMPARAISON = (EXPRESSION, ("==" | "<" | ">" | "<=" | ">="), EXPRESSION);
+TERME = FACTEUR, { ( "*" | "/" ), FACTEUR } ;
 
-OPERATEUR_LOGIQUE = (EXPRESSION, ("ou" | "et"), EXPRESSION);
+FACTEUR = NUMBER 
+        | IDENTIFIANT 
+        | "(", EXPRESSION, ")" ;
 
-VARIABLE = "var", IDENTIFIANT, { "entier" | "chaine" | "=", EXPRESSION};
+COMPARAISON = EXPRESSION, ( "==" | "<" | ">", "&&", "||"), EXPRESSION ;
 
-BOUCLE = "pour", ATTRIBUTION, ";", EXPRESSION, ";", ATTRIBUTION, BLOC;
+IDENTIFIANT = LETTRE, { LETTRE | CHIFFRE | "_" } ;
 
-CONDITIONNEL = "si", EXPRESSION, BLOC, ["sinon", BLOC];
+NUMBER = CHIFFRE, { CHIFFRE } ;
 
-IDENTIFIANT = LETTRE, { LETTRE | CHIFFRE | "_"};
+LETTRE = "a" | ... | "z" | "A" | ... | "Z" ;
 
-NOMBRE = CHIFFRE, { CHIFFRE };
+CHIFFRE = "0" | "1" | ... | "9" ;
 
-LETTRE = ( a | ... | z | A | .. | Z);
-
-CHIFFRE = ( 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 );
+```
