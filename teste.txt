@@ -1,0 +1,67 @@
+
+var x_1 entier
+x_1 = 3
+
+affiche#x_1#
+
+si (x_1 > 1 && !!!(x_1 < 1)) || x_1 == 3 {
+	x_1 = 2
+} 
+
+
+var x entier = 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2)) // Teste // Teste 2
+var y_1 entier = 3
+y_1 = y_1 + x_1
+var z__ entier
+z__ = x + y_1
+
+si x_1 == 2 {
+	x_1 = 2
+}
+
+si x_1 == 3 {
+	x_1 = 2
+} sinon {
+	x_1 = 3
+}
+
+pour x_1 = 0; x_1 < 1 || x == 2; x_1 = x_1 + 1 {
+	affiche#x_1#
+} 
+
+
+
+// Saida final
+affiche#x_1#
+affiche#x#
+affiche#z__+1#
+
+// All bool and entier operations
+var y entier = 2
+var z entier
+z = (y == 2)
+affiche#y+z#
+affiche#y-z#
+affiche#y*z#
+affiche#y/z#
+affiche#y == z#
+affiche#y < z#
+affiche#y > z#
+
+// All str operations 
+var a chaine 
+var b chaine
+
+x_1 = 1 
+y = 1 
+z = 2
+a = "abc"
+b = "def"
+affiche#a.b#
+affiche#a.x_1#
+affiche#x_1.a#
+affiche#y.z#
+affiche#a.(x_1==1)#
+affiche#a == a#
+affiche#a < b#
+affiche#a > b#
