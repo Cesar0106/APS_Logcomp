@@ -1,7 +1,7 @@
 # APS_Logcomp - LangueFrancaise
 
 ## Intro
-A linguagem vai utilizar nomes comuns como if, else e for. No entanto, tudo será traduzido para o francês.
+A linguagem vai utilizar nomes comuns como if, else e for. No entanto, tudo será traduzido para o francês. Uma versão mais simples e otimizada do compilador desenvolvido nas aulas de Lógica da Computação sera usada como base. 
 
 ## Dicionário FRANCES INGLES
 
